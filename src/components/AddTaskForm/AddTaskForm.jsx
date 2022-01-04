@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./AddTaskForm.css"
-const AddTaskForm = () => {
+const AddTaskForm = ({AddTask}) => {
+    const [value, setValue] = useState("");
+
+    const handleChange = (e) => {
+      e.preventDefault();
+      setValue(e.target.value)
+    }
+    
+    const handleSubmit = (e)=>{
+      e.preventDefault();
+      if (!value || value === ""){
+       return 
+      }
+      AddTask(value);
+    }
     return (
         <div className="AddTaskForm">
-        <form>
-          <input type="text" placeholder='alishamsian'/>
+        <form onSubmit={handleSubmit}>
+          <input onChange={handleChange} type="text" placeholder='alishamsian'/>
           <button type="submit">Add</button>
         </form>
       </div>

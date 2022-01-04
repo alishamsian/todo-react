@@ -1,12 +1,12 @@
 import React from 'react'
-
+import "./FilterFooter.css"
 const FilterFooter = () => {
     return (
-    <div>
-        <div>
+    <div className='FilterFooter'>
+        <div className='FilterFooter_countItem'>
           2 items
         </div>
-        <div>
+        <div className="FilterFooter_filters">
           <ul>
             <li>
               <button >All</button>

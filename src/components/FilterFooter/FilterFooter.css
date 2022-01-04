@@ -1,0 +1,48 @@
+.FilterFooter{
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.FilterFooter .FilterFooter_filters{
+    width: 100%;
+}
+.FilterFooter .FilterFooter_countItem{
+    width: 100px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ccc;
+
+}
+.FilterFooter .FilterFooter_filters ul{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.FilterFooter .FilterFooter_filters ul li button{
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition-duration: 500ms;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.FilterFooter .FilterFooter_filters ul li button:hover{
+    background-color: #2980B9;
+    color: #fff;
+}
+.FilterFooter .FilterFooter_filters ul li button:active{
+    background-color: #2980B9;
+    color: #fff;
+}
