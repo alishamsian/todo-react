@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState , } from 'react'
 import "./AddTaskForm.css"
 const AddTaskForm = ({AddTask}) => {
     const [value, setValue] = useState("");
+    const inputSubjectRef = useRef(null);
+
+    useEffect(() => {
+      inputSubjectRef.current.focus();
+    }, [])
 
     const handleChange = (e) => {
       e.preventDefault();
@@ -18,7 +23,12 @@ const AddTaskForm = ({AddTask}) => {
     return (
         <div className="AddTaskForm">
         <form onSubmit={handleSubmit}>
-          <input onChange={handleChange} type="text" placeholder='alishamsian'/>
+          <input
+           onChange={handleChange}
+            type="text"
+            placeholder='alishamsian'
+            ref={inputSubjectRef} 
+             />
           <button type="submit">Add</button>
         </form>
       </div>

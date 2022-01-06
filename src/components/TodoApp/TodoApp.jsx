@@ -39,11 +39,17 @@ const TodoApp = () => {
       ])
     }
 
+    const deleteTask =(taskId)=>{
+    let newTaskList = tasks;
+    delete newTaskList[tasks.findIndex((task)=> task.id === taskId)];
+    newTaskList = newTaskList.filter((item)=> item);
+    setTasks(newTaskList);
+    }
 
     return (
         <div className='TodoApp'>
             <AddTaskForm AddTask={AddTask} />
-            <TaskList tasks={tasks}/>
+            <TaskList tasks={tasks} deleteTask={deleteTask}/>
             <FilterFooter />
         </div>
     )
